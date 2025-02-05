@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="chat-container" class="open">
+        <div class="chat-header">
+            <span>Консультация</span>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message admin-message">Здравствуйте, меня зовут Владимир, буду рад ответить на ваши вопросы.</div>
+        </div>
+        <div class="chat-input">
+            <div class="chat-input__content">
+                <textarea type="text" id="user-message" placeholder="Напишите сообщение..." oninput="chatInputAutoResizeTA(this)" style="line-height: 21px; min-height: 44px;"></textarea>
+                <button class="send-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
