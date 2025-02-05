@@ -150,6 +150,7 @@ button, input, optgroup, select, textarea {
 .chat-input {
     padding: 15px;
     border-top: 1px solid #eee;
+    background-color: #fff;
 }
 
 .chat-input::placeholder {
@@ -261,6 +262,7 @@ input[type="text" i] {
     }
 
     .chat-input {
+        height: calc(100vh - 54px);
         position: absolute;
         left: 0;
         right: 0;
