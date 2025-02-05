@@ -257,9 +257,8 @@ input[type="text" i] {
     }
 
     .chat-messages {
-        height: calc(100vh - 54px);
         max-height: none;
-        height: auto;
+        height: calc(100vh - 54px);
     }
 
     .chat-input {
