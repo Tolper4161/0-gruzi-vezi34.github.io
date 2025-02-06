@@ -141,7 +141,7 @@ button, input, optgroup, select, textarea {
     margin-right: auto;
 }
 .message {
-    margin: 10px 0;
+    margin-bottom: 10px;
     padding: 10px 15px;
     border-radius: 8px;
     max-width: 80%;
@@ -254,7 +254,7 @@ input[type="text" i] {
     }
 }
 
-@media (pointer: coarse) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     #chat-container {
         width: auto;
         height: auto;
@@ -268,10 +268,11 @@ input[type="text" i] {
     
     .chat-header {
         border-radius: 0px;
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
+        z-index: 10;
     }
 
     .chat-messages {
@@ -279,6 +280,11 @@ input[type="text" i] {
         max-height: none;
         height: 100%;
         padding-top: calc(15px + 54px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
     .message {
