@@ -254,7 +254,7 @@ input[type="text" i] {
     }
 }
 
-@media (pointer: coarse) and (hover: none) and (max-width: 1024px) {
+@media (pointer: coarse) and (max-width: 1024px) {
     #chat-container {
         width: auto;
         height: auto;
