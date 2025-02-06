@@ -114,6 +114,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
 }
+
 button, select {
     text-transform: none;
 }
@@ -164,6 +165,8 @@ button, input, optgroup, select, textarea {
 }
 
 #user-message {
+    box-sizing: border-box;
+    height: 44px;
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
@@ -179,32 +182,38 @@ input {
 input:not([type="image" i]) {
     box-sizing: border-box;
 }
-таблица стилей агента пользователя
+
 input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
     overflow-clip-margin: 0px !important;
     overflow: clip !important;
 }
-таблица стилей агента пользователя
+
 input[type="text" i] {
     padding-block: 1px;
     padding-inline: 2px;
 }
 
 .send-btn {
+    width: 44px;
     height: 44px;
-    background: #ff8700;
-    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
+    background: #ff8700;
+    color: white;
     transition: background 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     #chat-container {
-        width: 350px;
+        transform: translate(50%, 50%);
+        right: 50%;
+        bottom: 50%;
     }
 }
 
@@ -212,35 +221,40 @@ input[type="text" i] {
     .chat-messages {
         height: calc(60vh - 110px);
     }
-}
-
-@media (max-width: 768px) {
+    
     .chat-chat-input__content {
         gap: 8px;
         padding: 12px;
     }
 }
 
-@media (max-width: 768px) {
-    #user-message {
-        height: 44px;
-        width: 100%;
+@media (max-height: 522px) {
+    #chat-container {
+        transform: translateX(50%);
+        top: 0;
+        bottom: 0;
+    }
+
+    .chat-messages {
+        max-height: none;
+        height: 100%;
+    }
+
+    .chat-input {
         box-sizing: border-box;
-        padding: 10px 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
 
-@media (max-width: 768px) {
-    .send-btn {
-        width: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
+@media (max-width: 350px) {
+    #chat-container {
+        width: 100%;
     }
 }
 
-@media (max-width: 576px) {
+@media (pointer: coarse) and (hover: none) and (max-width: 1024px) {
     #chat-container {
         width: auto;
         height: auto;
@@ -251,14 +265,24 @@ input[type="text" i] {
         bottom: 0;
         transform: translate(0px, 0px);
     }
-
+    
     .chat-header {
         border-radius: 0px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
     }
 
     .chat-messages {
+        box-sizing: border-box;
         max-height: none;
-        height: calc(100vh - 54px);
+        height: 100%;
+        padding-top: calc(15px + 54px);
+    }
+
+    .message {
+        max-width: 350px;
     }
 
     .chat-input {
