@@ -268,7 +268,7 @@ input[type="text" i] {
     
     .chat-header {
         border-radius: 0px;
-        position: fixed;
+        position: sticky;
         left: 0;
         right: 0;
         top: 0;
@@ -280,7 +280,7 @@ input[type="text" i] {
         max-height: none;
         height: 100%;
         padding-top: calc(15px + 54px);
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
